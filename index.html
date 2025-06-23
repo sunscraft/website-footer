@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hestiya Footer</title>
@@ -24,6 +26,14 @@
   /* border: 1px solid #ddd; */ /* ← REMOVE or comment this line */
 }
 
+.hestiya-font {
+  font-family: 	Swear Display;
+  font-size: 2.5rem; /* Adjust size as needed */
+  color: #000000;    /* Or your preferred green */
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
 
     .footer-inner {
       display: flex;
@@ -37,7 +47,8 @@
     .footer-brand {
       flex: 1 1 250px;
       max-width: 240px;
-      text-align: left;
+      text-align: center;
+      align-items: center;
     }
 
     .footer-columns {
@@ -136,47 +147,64 @@
     }
 
     .trust-logos img {
-      height: 96px;
+      height: 156px;
       object-fit: contain;
     }
+   
 
     @media (max-width: 900px) {
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 1rem;
-        text-align: left;
-      }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center; /* Center everything horizontally */
+    padding: 1rem;
+    text-align: center; /* Makes text inside centered too */
+  }
+  
 
-      .footer-brand {
-        text-align: left;
-        width: 100%;
-      }
 
-      .footer-columns {
-        flex-direction: row;
-        justify-content: center;
-        text-align: left;
-        gap: 0.5rem;
-        margin-top: 2rem;
-        width: 100%;
-      }
+  .footer-brand {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
 
-      .footer-lottie {
-        text-align: center;
-        justify-content: center;
-        width: 100%;
-        margin-top: 2rem;
-      }
+  .brand-name,
+  .brand-address,
+  .brand-contact {
+    text-align: center;
+    justify-content: center;
+  }
 
-      .footer-col {
-        flex: 1 1 calc(50% - 2rem);
-      }
+  .footer-columns {
+    flex-direction: column; /* Stack all columns vertically */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 2rem; /* More spacing between sections */
+    margin-top: 2rem;
+  }
 
-      .trust-logos {
-        justify-content: center;
-      }
-    }
+  .footer-col {
+    width: 100%; /* Ensure full width */
+    max-width: 300px; /* Optional: keeps it narrow and readable */
+  }
+
+  .footer-lottie {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .trust-logos {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
+    
   </style>
 </head>
 <body>
@@ -187,9 +215,10 @@
       <!-- Brand Section -->
       <div class="footer-brand">
         <h2 class="brand-name">
-          <img src="/hestiya-llogo.png" alt="Hestiya Logo" style="height: 76px; vertical-align: middle;">
-          HESTIYA
-        </h2>
+  <img src="/hestiya-llogo.png" alt="Hestiya Logo" style="height: 76px; vertical-align: middle;">
+  <span class="hestiya-font">Hestiya</span>
+</h2>
+
         <address class="brand-address">
           7 TEMASEK BOULEVARD<br>
           #12-07 SUNTEC TOWER ONE<br>
@@ -206,7 +235,7 @@
 
         <!-- Quick Links -->
         <div class="footer-col">
-          <h4>Quick links</h4>
+          <h3>Quick links</h3>
           <ul>
             <li><a href="https://www.hestiya.com/methodology" target="_blank" rel="noopener noreferrer">How it works?</a></li>
             <li><a href="https://www.hestiya.com/about" target="_blank" rel="noopener noreferrer">About us</a></li>
@@ -218,7 +247,7 @@
 
         <!-- Social -->
         <div class="footer-col">
-          <h4>Social</h4>
+          <h3>Social</h3>
           <ul>
             <li><a href="https://www.instagram.com/hestiyaforearth?igsh=dW9yem1zeHl2amc3" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             <li><a href="https://www.linkedin.com/company/hestiya/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -228,7 +257,7 @@
 
         <!-- Legal -->
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h3>Legal</h3>
           <ul>
             <li><a href="https://marketplace.hestiya.com/marketplace/private-policies" target="_blank" rel="noopener noreferrer">Terms of service</a></li>
             <li><a href="https://marketplace.hestiya.com/marketplace/private-policies" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
@@ -261,7 +290,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2024 Hestiya. All rights reserved.</p>
+      <p>© 2025 Hestiya. All rights reserved.</p>
     </div>
   </footer>
 
