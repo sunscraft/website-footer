@@ -26,25 +26,37 @@
     .footer-inner {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
-      padding: 2.5rem 3rem;
+      padding: 2rem 2rem;
       align-items: flex-start;
       justify-content: space-between;
+      gap: 2rem;
     }
 
-    .footer-inner h2,
-    .footer-inner h3 {
-      margin: 0 0 1rem 0;
+    .footer-brand {
+      flex: 1 1 250px;
+      max-width: 240px;
+      text-align: left;
+    }
+
+    .footer-columns {
+      flex: 2 1 400px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .footer-lottie {
+      flex: 1 1 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
     }
 
     .brand-name {
       font-size: 1.5rem;
       text-transform: uppercase;
       color: #000;
-    }
-
-    .footer-brand {
-      min-width: 250px;
     }
 
     .brand-address {
@@ -74,11 +86,13 @@
     }
 
     .footer-col {
-      min-width: 150px;
+      flex: 1 1 160px;
+      min-width: 120px;
     }
 
     .footer-col h3 {
       font-size: 1rem;
+      margin-bottom: 0.5rem;
       color: #000;
     }
 
@@ -103,13 +117,6 @@
       text-decoration: underline;
     }
 
-    .footer-lottie {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 250px;
-    }
-
     .footer-bottom {
       border-top: 1px solid #eee;
       text-align: center;
@@ -118,16 +125,60 @@
       color: #555;
     }
 
+    .trust-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .trust-logos img {
+      height: 96px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .trust-logos img:hover {
+      filter: grayscale(0%);
+    }
+
     @media (max-width: 900px) {
       .footer-inner {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        padding: 1rem 1rem;
+        text-align: left;
+      }
+
+      .footer-brand {
+        text-align: left;
+        width: 100%;
+      }
+
+      .footer-columns {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        width: 100%;
       }
 
       .footer-lottie {
+        text-align: center;
         justify-content: center;
+        width: 100%;
         margin-top: 2rem;
+      }
+
+      .footer-col {
+        flex: 1 1 calc(50% - 2rem);
+      }
+
+      .trust-logos {
+        justify-content: center;
       }
     }
   </style>
@@ -137,10 +188,10 @@
   <footer class="site-footer">
     <div class="footer-inner">
 
-      <!-- Brand -->
+      <!-- Brand Section -->
       <div class="footer-brand">
         <h2 class="brand-name">
-          <img src="/hestiya-llogo.png" alt="Hestiya Logo" style="height: 76px; margin-right: 0rem; vertical-align: middle;">
+          <img src="/hestiya-llogo.png" alt="Hestiya Logo" style="height: 76px; vertical-align: middle;">
           HESTIYA
         </h2>
         <address class="brand-address">
@@ -154,35 +205,49 @@
         </ul>
       </div>
 
-      <!-- Quick Links -->
-      <div class="footer-col">
-        <h3>Quick links</h3>
-        <ul>
-          <li><a href="https://www.hestiya.com/methodology">How it works?</a></li>
-          <li><a href="https://www.hestiya.com/about">About us</a></li>
-          <li><a href="https://marketplace.hestiya.com/marketplace/faq">FAQ</a></li>
-          <li><a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1ai9jKHkjZhwSU7M8YWn1AbLGnnYCBa8S-7lKwkdOC4qoNRENkUjEPapAScvhvZ_cnnJDGah-N">Contact us</a></li>
-          <li><a href="https://www.hestiya.com/on-boarding-form">Want to list projects?</a></li>
-        </ul>
-      </div>
+      <!-- Footer Columns -->
+      <div class="footer-columns">
 
-      <!-- Social -->
-      <div class="footer-col">
-        <h3>Social</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/hestiyaforearth?igsh=dW9yem1zeHl2amc3">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/hestiya/">LinkedIn</a></li>
-          <li><a href="https://x.com/Hestiyaforearth">Twitter</a></li>
-        </ul>
-      </div>
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="https://www.hestiya.com/methodology">How it works?</a></li>
+            <li><a href="https://www.hestiya.com/about">About us</a></li>
+            <li><a href="https://marketplace.hestiya.com/marketplace/faq">FAQ</a></li>
+            <li><a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1ai9jKHkjZhwSU7M8YWn1AbLGnnYCBa8S-7lKwkdOC4qoNRENkUjEPapAScvhvZ_cnnJDGah-N">Contact us</a></li>
+            <li><a href="https://www.hestiya.com/on-boarding-form">Want to list projects?</a></li>
+          </ul>
+        </div>
 
-      <!-- Legal -->
-      <div class="footer-col">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="https://marketplace.hestiya.com/marketplace/private-policies">Terms of service</a></li>
-          <li><a href="https://marketplace.hestiya.com/marketplace/private-policies">Privacy policy</a></li>
-        </ul>
+        <!-- Social -->
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/hestiyaforearth?igsh=dW9yem1zeHl2amc3">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/hestiya/">LinkedIn</a></li>
+            <li><a href="https://x.com/Hestiyaforearth">Twitter</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="https://marketplace.hestiya.com/marketplace/private-policies">Terms of service</a></li>
+            <li><a href="https://marketplace.hestiya.com/marketplace/private-policies">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Trust -->
+        <div class="footer-col">
+          <h3>Trust</h3>
+          <div class="trust-logos">
+            <img src="/Certified_B_Corporation_PENDING-Black-LG.jpg" alt="B Corp Pending" />
+            <!-- Add more logos if needed -->
+          </div>
+        </div>
+
       </div>
 
       <!-- Lottie Animation -->
@@ -206,3 +271,4 @@
 
 </body>
 </html>
+
