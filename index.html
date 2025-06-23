@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hestiya Footer</title>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <style>
+    body {
+      background: #f0f0f0;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .site-footer {
+      background: #ffffff;
+      color: #111;
+      border-radius: 12px;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      font-family: sans-serif;
+      border: 1px solid #ddd;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2.5rem 3rem;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .footer-inner h2,
+    .footer-inner h3 {
+      margin: 0 0 1rem 0;
+    }
+
+    .brand-name {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: #000;
+    }
+
+    .footer-brand {
+      min-width: 250px;
+    }
+
+    .brand-address {
+      font-style: normal;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .brand-contact {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .brand-contact li {
+      margin-bottom: 0.5rem;
+    }
+
+    .brand-contact a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .brand-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-col {
+      min-width: 150px;
+    }
+
+    .footer-col h3 {
+      font-size: 1rem;
+      color: #000;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col a {
+      color: #333;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .footer-col a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .footer-lottie {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 250px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    @media (max-width: 900px) {
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-lottie {
+        justify-content: center;
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h2 class="brand-name">
+          <img src="/hestiya-llogo.png" alt="Hestiya Logo" style="height: 76px; margin-right: 0rem; vertical-align: middle;">
+          HESTIYA
+        </h2>
+        <address class="brand-address">
+          7 TEMASEK BOULEVARD<br>
+          #12-07 SUNTEC TOWER ONE<br>
+          ONE SINGAPORE 038987
+        </address>
+        <ul class="brand-contact">
+          <li>Phone: <a href="tel:+65 3106 5030">+65 3106 5030</a></li>
+          <li>Email: <a href="mailto:support@hestiya.com">support@hestiya.com</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="https://www.hestiya.com/methodology">How it works?</a></li>
+          <li><a href="https://www.hestiya.com/about">About us</a></li>
+          <li><a href="https://marketplace.hestiya.com/marketplace/faq">FAQ</a></li>
+          <li><a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1ai9jKHkjZhwSU7M8YWn1AbLGnnYCBa8S-7lKwkdOC4qoNRENkUjEPapAScvhvZ_cnnJDGah-N">Contact us</a></li>
+          <li><a href="https://www.hestiya.com/on-boarding-form">Want to list projects?</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-col">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/hestiyaforearth?igsh=dW9yem1zeHl2amc3">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/hestiya/">LinkedIn</a></li>
+          <li><a href="https://x.com/Hestiyaforearth">Twitter</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="https://marketplace.hestiya.com/marketplace/private-policies">Terms of service</a></li>
+          <li><a href="https://marketplace.hestiya.com/marketplace/private-policies">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Lottie Animation -->
+      <div class="footer-lottie">
+        <dotlottie-player 
+          src="https://lottie.host/e0346e0e-ff58-4cd7-8306-07cb9d8e2f33/aqqXKjdJgM.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 200px; height: 200px;"
+          loop
+          autoplay>
+        </dotlottie-player>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Hestiya. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
