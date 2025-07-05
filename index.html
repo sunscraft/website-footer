@@ -15,25 +15,23 @@
     }
 
     .site-footer {
-  background: #ffffff;
-  
-  border-radius: 12px;
-  width: 99%;
-  max-width: 1600px;
-  margin: 0 auto;
-  overflow: hidden;
-  font-family: sans-serif;
-  /* border: 1px solid #ddd; */ /* ← REMOVE or comment this line */
-}
+      background: #ffffff;
+      border-radius: 12px;
+      width: 99%;
+      max-width: 1600px;
+      margin: 0 auto;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
 
-.hestiya-font {
-  font-family: 	Swear Display;
-  font-size: 2.5rem; /* Adjust size as needed */
-  color: #000000;    /* Or your preferred green */
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.5rem;
-}
+    .hestiya-font {
+      font-family: 'helvetica';
+      font-size: 2.5rem;
+      color: #000000;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    }
 
     .footer-inner {
       display: flex;
@@ -44,13 +42,7 @@
       gap: 2rem;
     }
 
-    .footer-brand {
-      flex: 1 1 250px;
-      max-width: 240px;
-      text-align: center;
-      align-items: center;
-    }
-
+    /* Updated footer columns to include brand as first column */
     .footer-columns {
       flex: 2 1 400px;
       display: flex;
@@ -66,10 +58,32 @@
       min-width: 180px;
     }
 
+    /* Brand column styling to match other columns */
+    .footer-col.brand-col {
+      flex: 1 1 160px;
+      min-width: 160px;
+    }
+
     .brand-name {
+      display: flex;
+      align-items: center;
+      
+      margin-bottom: 1rem;
+      justify-content: flex-start; /* add this */
+      
+    }
+
+    .brand-name img {
+      height: 50px;
+      justify-content: flex-start;
+      
+    }
+
+    .brand-name .hestiya-font {
       font-size: 1.5rem;
-      text-transform: uppercase;
+      margin-left: 0;
       color: #000;
+      margin-right: 10px;
     }
 
     .brand-address {
@@ -77,6 +91,7 @@
       line-height: 1.6;
       color: #333;
       margin-bottom: 1rem;
+      font-size: 0.95rem;
     }
 
     .brand-contact {
@@ -86,27 +101,30 @@
     }
 
     .brand-contact li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .brand-contact a {
-      color: #111;
+      color: #333;
       text-decoration: none;
+      font-size: 0.95rem;
     }
 
     .brand-contact a:hover {
+      color: #000;
       text-decoration: underline;
     }
 
     .footer-col {
       flex: 1 1 160px;
-      min-width: 120px;
+      min-width: 160px;
     }
 
     .footer-col h3 {
       font-size: 1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       color: #000;
+      font-weight: bold;
     }
 
     .footer-col ul {
@@ -138,6 +156,14 @@
       color: #555;
     }
 
+    /* Make the trust column visually balanced */
+    .footer-col.trust-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
     .trust-logos {
       display: flex;
       flex-wrap: wrap;
@@ -147,72 +173,80 @@
     }
 
     .trust-logos img {
-      height: 156px;
+      height: 80px;
       object-fit: contain;
     }
-   
 
+    /* Mobile responsive */
     @media (max-width: 900px) {
-  .hestiya-font {
-  font-family: 	Swear Display;
-  font-size: 2.5rem; /* Adjust size as needed */
-  color: #000000;    /* Or your preferred green */
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.5rem;
-}
-  .footer-inner {
-    flex-direction: column;
-    align-items: center; /* Center everything horizontally */
-    padding: 1rem;
-    text-align: center; /* Makes text inside centered too */
-  }
-  
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+      }
 
+      .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 2rem;
+        margin-top: 0;
+      }
 
-  .footer-brand {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-
-  .brand-name,
-  .brand-address,
-  .brand-contact {
-    text-align: center;
-    justify-content: center;
-  }
-
-  .footer-columns {
-    flex-direction: column; /* Stack all columns vertically */
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    gap: 2rem; /* More spacing between sections */
-    margin-top: 2rem;
-  }
-
-  .footer-col {
-    width: 100%; /* Ensure full width */
-    max-width: 300px; /* Optional: keeps it narrow and readable */
-  }
-
-  .footer-lottie {
-    width: 100%;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .trust-logos {
-    justify-content: center;
-  }
-
-  .footer-bottom {
-    text-align: center;
-  }
-}
+      .footer-col,
+      .footer-col.brand-col {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
 
     
+
+      .brand-name .hestiya-font {
+        font-size: 2rem;
+      }
+
+      .brand-address,
+      .brand-contact {
+        text-align: center;
+      }
+
+      .footer-col.trust-col {
+        align-items: center;
+        text-align: center;
+      }
+
+      .trust-logos {
+        justify-content: center;
+      }
+
+      .footer-lottie {
+        width: 100%;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .footer-bottom {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .brand-name img {
+        height: 50px;
+        
+      }
+
+      .brand-name .hestiya-font {
+        font-size: 1.5rem;
+      }
+
+      .trust-logos img {
+        height: 60px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -220,26 +254,25 @@
   <footer class="site-footer">
     <div class="footer-inner">
 
-      <!-- Brand Section -->
-      <div class="footer-brand">
-        <h2 class="brand-name">
-  <img src="/hestiya-llogo.png" alt="Hestiya Logo" style="height: 76px; vertical-align: middle;">
-  <span class="hestiya-font">Hestiya</span>
-</h2>
-
-        <address class="brand-address">
-          7 TEMASEK BOULEVARD<br>
-          #12-07 SUNTEC TOWER ONE<br>
-          ONE SINGAPORE 038987
-        </address>
-        <ul class="brand-contact">
-          <li>Phone: <a href="tel:+65 3106 5030" target="_blank" rel="noopener noreferrer">+65 3106 5030</a></li>
-          <li>Email: <a href="mailto:support@hestiya.com" target="_blank" rel="noopener noreferrer">support@hestiya.com</a></li>
-        </ul>
-      </div>
-
-      <!-- Footer Columns -->
+      <!-- Footer Columns (including brand as first column) -->
       <div class="footer-columns">
+
+        <!-- Brand Section (now as first column) -->
+        <div class="footer-col brand-col">
+          <div class="brand-name">
+            <img src="/hestiya-llogo.png" alt="Hestiya Logo">
+            <span class="hestiya-font">Hestiya</span>
+          </div>
+          <address class="brand-address">
+            7 TEMASEK BOULEVARD<br>
+            #12-07 SUNTEC TOWER ONE<br>
+            SINGAPORE 038987
+          </address>
+          <ul class="brand-contact">
+            <li>Phone: <a href="tel:+65 3106 5030" target="_blank" rel="noopener noreferrer">+65 3106 5030</a></li>
+            <li>Email: <a href="mailto:support@hestiya.com" target="_blank" rel="noopener noreferrer">support@hestiya.com</a></li>
+          </ul>
+        </div>
 
         <!-- Quick Links -->
         <div class="footer-col">
@@ -273,11 +306,10 @@
         </div>
 
         <!-- Trust -->
-        <div class="footer-col">
+        <div class="footer-col trust-col">
           <h3>Trust</h3>
           <div class="trust-logos">
             <img src="/b-corp-logo.png" alt="B Corp Pending" />
-            <!-- Add more logos if needed -->
           </div>
         </div>
 
